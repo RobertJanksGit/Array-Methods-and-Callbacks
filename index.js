@@ -19,15 +19,19 @@ console.log(fifaData[828]["Home Team Goals"]);
 console.log(fifaData[828]["Away Team Goals"]);
 console.log(fifaData[828]["Win conditions"]);
 
-/* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
+/* Task 2: Create a function called  getFinals that takes `data` as an argument 
+and returns an array of objects with only finals data */
 
-function getFinals(/* code here */) {
-
-    /* code here */
-
+function getFinals(data) {
+    return data.filter((curentItem) => {
+        if (curentItem.Stage === "Final"){
+            return curentItem;
+        }
+    });
 };
-
-/* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
+console.log(getFinals(fifaData));
+/* Task 3: Implement a higher-order function called `getYears` that accepts the callback 
+function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
 function getYears(/* code here */) {
 
